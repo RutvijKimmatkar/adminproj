@@ -1,0 +1,40 @@
+using System.Runtime.CompilerServices;
+
+class Program
+{
+    static void Admin_mode()
+    {
+        int customer_type;
+        int discount;
+        Console.WriteLine("admin mode");
+        Console.WriteLine("select type of customer: ");
+        Console.WriteLine("1. regular");
+        Console.WriteLine("2. vip");
+        customer_type = Convert.ToInt32(Console.ReadLine());
+        if(customer_type==1)
+        {
+            discount = 5;
+        }
+        else if(customer_type==2)
+        {
+            discount = 10;
+        }
+
+    }
+    static void Guest_mode()
+    {
+        Console.WriteLine("guest mode");
+    }
+    static void Main()
+    {
+        float cost, price;
+        Console.WriteLine("welcome!");
+        Console.WriteLine("press enter to browse as guest.");
+        if(Console.ReadLine()=="/admin")
+        {
+            Admin_mode();
+        }
+        else
+        Guest_mode();
+    }
+}
